@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/title_bar_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_title"
+            android:text="Notes"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:id="@+id/menu_btn"
+            android:src="@drawable/ic_baseline_menu_24"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            app:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar_layout"
+        android:id="@+id/recyler_view"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_note_btn"
+        android:backgroundTint="@color/white"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_baseline_add_24"
+        />
+
+
+
+</RelativeLayout>
